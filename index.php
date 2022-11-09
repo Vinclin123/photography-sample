@@ -88,10 +88,8 @@
     <div class="container">
       <div class="row justify-content-center">
         <div class="col-lg-6 text-center">
-          <?php
-        session_start();
-          ?>
-          <h2>I'm <span><?php echo $_SESSION["username"]; ?></span> a  Photographer from India</h2>
+          <h3 style="color:green"><b>WELCOME "<?php echo $_GET['username']?></b>!"</h3>
+          <h2>I'm <span>VINCLIN'S</span> a  Photographer from India</h2>
           <p>Iam a Photographer if you are interested in photograph contact me</p>
           <a href="contact.html" class="btn-get-started">Available for hire</a>
         </div>

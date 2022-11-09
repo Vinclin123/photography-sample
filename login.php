@@ -13,13 +13,13 @@ $conn = mysqli_connect($servername, $username, $password, $dbname);
     if($username!="" && $password!="")
     {
        $sql="SELECT username,password1 FROM registration WHERE username='$username' AND password1='$password'";
-       echo $sql;
+       //echo $sql;
        $result = mysqli_query($conn, $sql);
        $data = mysqli_fetch_assoc($result);
        if($data['username']!="")
        {
-        $_SESSION["username"]=$data['username'];
-        echo"<script>window.location='index.php'</script>";
+
+        echo"<script>window.location='index.php?username=" . $data['username'] . "'</script>";
        }
        else
        {
